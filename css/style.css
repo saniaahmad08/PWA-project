@@ -23,6 +23,14 @@ header p{
     color: rgb(212,75,212,0.6);
     text-shadow: 2px 2px 3px rgba(227, 201, 227, 0.6);
 }
+.header-btns {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
 .install-btn {
     margin-top: 15px;
     padding: 10px 25px;
@@ -35,6 +43,26 @@ header p{
     font-weight: bold;
 }
 .install-btn:hover {
+    background: #c06fa4;
+    color: white;
+}
+.promo-link-btn {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 10px 25px;
+    background: white;
+    color: #c06fa4;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-family: 'Brush Script MT', serif;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.promo-link-btn:hover {
     background: #c06fa4;
     color: white;
 }

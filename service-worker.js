@@ -30,6 +30,7 @@ self.addEventListener('install', event => {
                 return cache.addAll(ASSETS_TO_CACHE);
             })
     );
+    self.skipWaiting();
 });
 self.addEventListener('activate', event => {
     event.waitUntil(
@@ -40,6 +41,7 @@ self.addEventListener('activate', event => {
             );
         })
     );
+    self.clients.claim();
 });
 self.addEventListener('fetch', event => {
     event.respondWith(
