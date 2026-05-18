@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Buddies — Programmer Documentation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .docs-header {
+            background: radial-gradient(circle, rgba(196, 224, 196, 0.867), rgba(223, 136, 217, 0.867));
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .docs-header h1 {
+            font-size: 5rem;
+            color: white;
+            text-shadow: 2px 2px 3px rgba(212, 75, 212, 0.6);
+        }
+
+        .docs-header p {
+            font-size: 1.9rem;
+            color: rgb(212, 75, 212, 0.8);
+        }
+
+        .section-title {
+            color: #c06fa4;
+            font-size: 2.1rem;
+            border-bottom: 2px solid #f8b4d9;
+            padding-bottom: 8px;
+            margin: 40px 0 20px;
+        }
+
+        .doc-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+        }
+
+        .doc-card h5 {
+            color: #c06fa4;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .doc-card p,
+        .doc-card li {
+            font-family: 'Times New Roman', serif;
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        code {
+            background: #f9f3f7;
+            border: 1px solid #f8b4d9;
+            border-radius: 5px;
+            padding: 2px 8px;
+            color: #c06fa4;
+            font-size: 0.9rem;
+        }
+
+        pre {
+            background: #f9f3f7;
+            border: 1px solid #f8b4d9;
+            border-radius: 10px;
+            padding: 20px;
+            color: #3d3d3d;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+
+        .warning-card {
+            background: #fff8fc;
+            border-left: 4px solid #c06fa4;
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-top: 15px;
+            color: #555;
+        }
+
+        footer {
+            background: radial-gradient(circle, rgba(196, 224, 196, 0.867), rgba(223, 136, 217, 0.867));
+            text-align: center;
+            padding: 25px;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="docs-header">
+        <h1> Bloom Buddies</h1>
+        <p>Programmer Documentation</p>
+        <a href="promo.html" style="color:white; text-decoration:underline;font-size: 1.5rem;text-shadow: 2px 2px 3px rgba(212, 75, 212, 0.6);">← Back to Promo</a>
+    </div>
+
+    <div class="container my-5">
+
+        <h2 class="section-title"> Overview</h2>
+        <div class="doc-card">
+            <p>Bloom Buddies uses a <code>data.json</code> file to store all flower data. The app reads this file
+                automatically when it loads and builds the menu and content from it. This means you can add, remove, or
+                change flowers simply by editing the JSON file — no changes to the HTML or JavaScript are needed.</p>
+        </div>
+
+        <h2 class="section-title">JSON File Structure</h2>
+        <div class="doc-card">
+            <p>The <code>data.json</code> file contains one array called <code>flowers</code>. Each flower is an object
+                inside that array with the following fields:</p>
+            <pre>
+{
+    "flowers": [
+        {
+            "id": 1,
+            "title": "Flower Name",
+            "text": "A short description of the flower.",
+            "image": "assets/images/filename.jpg",
+            "audio": "assets/audio/filename.mp3",
+            "growing": {
+                "sunlight": "How much sun it needs",
+                "water": "How often to water it",
+                "soil": "What type of soil it needs",
+                "season": "Best time to plant it",
+                "tip": "A helpful growing tip"
+            }
+        }
+    ]
+}
+            </pre>
+        </div>
+
+        <!-- HOW TO ADD -->
+        <h2 class="section-title"> How to Add a New Flower</h2>
+        <div class="doc-card">
+            <h5>Step 1 — Add the flower object to data.json</h5>
+            <p>Open <code>data.json</code> and add a comma after the last flower's closing <code></code>, then paste a
+                new flower object. Example:</p>
+            <pre>
+{
+    "id": 6,
+    "title": "Sunflower",
+    "text": "Sunflowers are tall, bright yellow flowers that always face the sun.",
+    "image": "assets/images/sunflower.jpg",
+    "audio": "assets/audio/sunflower.mp3",
+    "growing": {
+        "sunlight": "Full sun, at least 6-8 hours per day",
+        "water": "Water deeply once a week",
+        "soil": "Well-drained, slightly acidic soil",
+        "season": "Plant seeds in spring after the last frost",
+        "tip": "Plant near a fence or wall for wind support!"
+    }
+}
+            </pre>
+
+            <h5 class="mt-4">Step 2 — Add the image file</h5>
+            <p>Save your flower image as a <code>.jpg</code> or <code>.png</code> file and place it in the
+                <code>assets/images/</code> folder. The filename must match exactly what you wrote in the
+                <code>"image"</code> field in the JSON.</p>
+
+            <h5 class="mt-4">Step 3 — Add the audio file</h5>
+            <p>Save your audio file as a <code>.mp3</code> and place it in the <code>assets/audio/</code> folder. The
+                filename must match exactly what you wrote in the <code>"audio"</code> field in the JSON.</p>
+
+            <h5 class="mt-4">Step 4 — Update the service worker</h5>
+            <p>Open <code>service-worker.js</code> and add the new image and audio file paths to the
+                <code>ASSETS_TO_CACHE</code> array so they work offline:</p>
+            <pre>
+'assets/images/sunflower.jpg',
+'assets/audio/sunflower.mp3'
+            </pre>
+        </div>
+
+        <h2 class="section-title"> Important Rules</h2>
+        <div class="doc-card">
+            <ul>
+                <li>Each flower must have a unique <code>id</code> number.</li>
+                <li>File names in the JSON must match the actual file names exactly — including lowercase letters.</li>
+                <li>Always add a comma after the closing <code></code> of the previous flower before adding a new one.
+                </li>
+                <li>Do <strong>not</strong> add a comma after the very last flower in the array.</li>
+                <li>All text values must be wrapped in double quotes <code>" "</code>.</li>
+                <li>If your JSON has an error, the menu will not load </li>
+            </ul>
+            <div class="warning-card">
+                 <strong>Tip:</strong> After editing the JSON, open the browser console (right click → Inspect →
+                Console) and reload the page. If there are any errors they will appear in red there.
+            </div>
+        </div>
+
+        <h2 class="section-title">Changing to a Completely Different Dataset</h2>
+        <div class="doc-card">
+            <p>To change the app to a completely different topic (for example, from flowers to animals), follow these
+                steps:</p>
+            <ol>
+                <li>Replace all the flower objects in <code>data.json</code> with your new topic's objects using the
+                    same format.</li>
+                <li>Replace the image and audio files in the <code>assets/</code> folders with your new ones.</li>
+                <li>Update the app name and description in <code>index.html</code>, <code>manifest.json</code>, and
+                    <code>style.css</code>.</li>
+                <li>Update the cache list in <code>service-worker.js</code> to include all new file paths.</li>
+            </ol>
+            <p>No changes to <code>app.js</code> are needed as long as the JSON structure stays the same!</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p> Bloom Buddies — Programmer Documentation</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+{
+  "flowers": [
+    {
+      "id": 1,
+      "title": "Lily",
+      "text": "Lilies belong to the genus Lilium and are tall, straight stemmed flowers with narrow leaves that come in a variety of colors. The main colors include white, pink, yellow, orange, and red. Their flowers are often shaped like trumpets or open bells, with six petal-like segments that curve outward.",
+      "image": "assets/images/lily.jpg",
+      "audio": "assets/audio/lily.mp3",
+      "growing": {
+        "sunlight": "Full sun to partial shade",
+        "water": "Water regularly, keep soil moist but not waterlogged",
+        "soil": "Well-drained, slightly acidic soil",
+        "season": "Plant bulbs in spring or fall",
+        "tip": "Add mulch around the base to keep roots cool!"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Tulip",
+      "text": "Tulips belong to genus Tulipa and are bright, cup-shaped flowers that have a single flower per stem, with smooth, elongated petals. They come in almost every color, including red, yellow, pink, purple, white, and even multicolored varieties.",
+      "image": "assets/images/tulip.jpg",
+      "audio": "assets/audio/tulip.mp3",
+      "growing": {
+        "sunlight": "Full sun",
+        "water": "Water after planting, then sparingly until they sprout",
+        "soil": "Well-drained, fertile soil",
+        "season": "Plant bulbs in autumn for spring blooms",
+        "tip": "Plant bulbs pointy side up, about 6 inches deep!"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Bleeding Heart",
+      "text": "Bleeding Heart flowers are heart-shaped blooms that appear to hang from arching stems. Each flower looks like a tiny pink or white heart with a drop-shaped petal underneath, giving the appearance of a “bleeding” heart.",
+      "image": "assets/images/heart.jpg",
+      "audio": "assets/audio/heart.mp3",
+      "growing": {
+        "sunlight": "Partial to full shade",
+        "water": "Keep soil consistently moist",
+        "soil": "Rich, moist, well-drained soil",
+        "season": "Plant in early spring or fall",
+        "tip": "They love shady spots — perfect under trees!"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Orchids",
+      "text": "Orchids are a large and diverse family of flowering plants in the family Orchidaceae, and they come in many shapes and sizes. Orchids are unique because many of them grow as epiphytes, meaning they live on other plants without harming them, absorbing moisture and nutrients from the air and rain.",
+      "image": "assets/images/orchids.jpg",
+      "audio": "assets/audio/orchids.mp3",
+      "growing": {
+        "sunlight": "Bright indirect light",
+        "water": "Water once a week, let roots dry between watering",
+        "soil": "Orchid bark or special orchid mix, not regular soil",
+        "season": "Can bloom year round indoors",
+        "tip": "Ice cubes are a great way to water orchids slowly!"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Peonies",
+      "text": "Peonies belong to genus Paeonia and are known for their heavily layered petals that form round, cloud-like blooms and come in shades of pink, white, red, and coral. When fully open, peonies can look almost like oversized roses, but with a softer, more ruffled texture.",
+      "image": "assets/images/peonies.jpg",
+      "audio": "assets/audio/peonies.mp3",
+      "growing": {
+        "sunlight": "Full sun, at least 6 hours a day",
+        "water": "Water deeply but infrequently",
+        "soil": "Fertile, well-drained soil",
+        "season": "Plant in fall for beautiful spring blooms",
+        "tip": "Don't plant too deep — the eyes should be just 1-2 inches below soil!"
+      }
+    }
+  ]
+}
